@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+	</head>
+	<body>
+		<div style="margin-top: 50px;" class="ui container">
+			<h1 class="ui center aligned header"> Todo App</h1>
+			<form class="ui form" action="/add" method="post">
+				<div>
+					<label>Todo Title</label>
+					<input type="text" name="title" placeholder="Enter Todo"><br>
+				</div>
+				<button class="ur blue button" type="submit">Add</button>
+			</form>
+			<hr>
+			<h1>Item ID: {{ id }}</h1>
+			<span class="ui green label"> Completed</span>
+			<a class="ui blue button" href="/update/{{ todo.id }}">Update</a>
+			<a class="ui red button" href="/delete/{{ todo.id }}">Delete</a>
+			
+		</div>
+	</body>
+</html>
